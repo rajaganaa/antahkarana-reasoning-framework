@@ -1,0 +1,16 @@
+dataset,config,em_mean,f1_mean,sf_em,sf_f1
+hotpotqa,Full Antahkarana,0.46,0.6174,0.0,0.0
+hotpotqa,w/o Routing,0.11,0.3006,0.0,0.0
+hotpotqa,w/o Pramana,0.46,0.6174,0.0,0.0
+hotpotqa,w/o Samsaya,0.46,0.6174,0.0,0.0
+hotpotqa,w/o Evidence,0.28,0.3839,0.0,0.0
+svamp,Full Antahkarana,0.95,0.95,N/A,N/A
+svamp,w/o Routing,0.94,0.94,N/A,N/A
+svamp,w/o Pramana,0.95,0.95,N/A,N/A
+svamp,w/o Samsaya,0.95,0.95,N/A,N/A
+svamp,w/o Evidence,0.95,0.95,N/A,N/A
+fever,Full Antahkarana,0.55,0.55,N/A,N/A
+fever,w/o Routing,0.17,0.17,N/A,N/A
+fever,w/o Pramana,0.62,0.62,N/A,N/A
+fever,w/o Samsaya,0.55,0.55,N/A,N/A
+fever,w/o Evidence,0.55,0.55,N/A,N/A

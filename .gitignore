@@ -1,0 +1,25 @@
+# Large result files and raw data
+**/results/raw/
+results/raw/
+**/*.json
+!**/datasets/cache/*.json # keep small cached datasets if necessary, but ignore all other heavy json
+
+# Logs
+*.log
+**/*.log
+experiment_log.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment
+.DS_Store

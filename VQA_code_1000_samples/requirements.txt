@@ -1,0 +1,46 @@
+# Antahkarana — pinned dependency versions for IEEE reproducibility
+# Generated: April 2026
+# Tested on: CUDA 12.1, cuDNN 8.9, Python 3.10
+# GPU: NVIDIA A100 / RTX 3090 (16GB+ VRAM recommended)
+
+# Core ML
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+
+# HuggingFace stack
+transformers==4.40.2
+datasets==2.19.1
+huggingface-hub==0.23.0
+accelerate==0.30.0
+tokenizers==0.19.1
+
+# BLIP-2 / image processing
+Pillow==10.3.0
+salesforce-lavis==1.0.2
+
+# Retrieval (Chitta module)
+sentence-transformers==2.7.0
+faiss-cpu==1.8.0            # use faiss-gpu==1.8.0 if GPU available
+
+# Numerics / stats
+numpy==1.26.4
+scipy==1.13.0               # optional: used for cross-checking our pure-python stats
+pandas==2.2.2
+
+# Visualisation / reporting
+matplotlib==3.9.0
+seaborn==0.13.2
+rich==13.7.1
+
+# GPU monitoring
+pynvml==11.5.0
+
+# Optional: TensorRT optimisation (requires CUDA toolkit)
+# torch-tensorrt==2.2.0
+# onnx==1.16.0
+# onnxruntime-gpu==1.18.0
+
+# Dev / testing
+pytest==8.2.0
+pytest-cov==5.0.0

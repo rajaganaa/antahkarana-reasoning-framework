@@ -1,0 +1,7 @@
+condition,n_samples,vqa_accuracy,exact_match,consistency,hallucination_pct,mean_latency_s,p95_latency_s,throughput_sps,mean_gpu_util_pct,total_model_calls
+Single-Pass Baseline,1000,0.6743,0.734,1.0,26.6,0.3511,0.505,2.7489,41.5,1000
+CoT Baseline,1000,0.6203,0.684,1.0,31.6,0.525,0.7141,1.9001,39.3,1000
+Self-Consistency (3x),1000,0.6857,0.745,0.7873,15.6,0.8995,1.5727,1.1102,43.8,3000
+No Verification (–P2),1000,0.6757,0.735,1.0,26.5,0.3503,0.5042,2.7543,41.5,1000
+No Consistency (–P3),1000,0.6767,0.737,0.927,26.3,0.6461,0.987,1.5172,43.3,2000
+Full Antahkarana ★,1000,0.7263,0.791,0.927,20.9,0.6897,1.022,1.4228,43.5,2219
