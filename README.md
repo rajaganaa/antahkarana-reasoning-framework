@@ -1,4 +1,4 @@
-# Antahkarana: Adaptive Multi-Stage LLM and VLM Reasoning via Conditional Pass Orchestration
+# Antahkarana: Cognitively-Inspired Adaptive Reasoning for LLMs and VLMs
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python" />
