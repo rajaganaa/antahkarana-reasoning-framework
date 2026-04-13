@@ -262,8 +262,7 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @article{rajaganapathy2026antahkarana,
-  title     = {Antahkarana: Adaptive Multi-Stage {LLM} and {VLM} Reasoning
-               via Conditional Pass Orchestration},
+  title     = {Antahkarana: Cognitively-Inspired Adaptive Reasoning for LLMs and VLMs},
   author    = {RajaGanapathy, M and Karthikeyan, H},
   journal   = {IEEE Conference Proceedings},
   year      = {2026},
