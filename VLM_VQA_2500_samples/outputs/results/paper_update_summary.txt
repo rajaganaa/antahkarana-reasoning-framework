@@ -1,0 +1,24 @@
+========================================================================
+ANTAHKARANA IEEE PAPER — VERIFIED RESULTS (v5)
+Generated : 2026-04-23 07:06:50
+Hardware  : NVIDIA L4  |  PyTorch 2.4.0+cu121
+Samples   : 2500 (500/dataset × 5)
+========================================================================
+
+--- TABLE II: VQA RESULTS ---
+  Method               VQA%   EM%    M-F1  Hall%  Pass2  Pass3
+  Full Antahkarana      41.6   43.2  0.142   46.4     40    123
+  Single-Pass+RAG       38.6   40.5  0.132   51.9      0      0
+  CoT (SubQ)            39.4   41.2  0.129   50.6      0      0
+  SC (5x,weighted)      39.6   41.6  0.135   51.0      0      0
+  Direct Prompting      39.2   41.2  0.145   45.0      0      0
+  -Retrieval(Chitta)    39.6   41.6  0.146   43.8    134     77
+
+--- KEY FINDINGS ---
+  Antahkarana EM:        43.2%
+  vs Single-Pass:        40.5%  (Δ = +2.7pp)
+  Hallucination drop:    +5.6pp vs Single-Pass
+  Model-call reduction:  70.1% vs SC
+  Pass2 fired:           40/2500
+  Pass3 fired:           123/2500
+========================================================================

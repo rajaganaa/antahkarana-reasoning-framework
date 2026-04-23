@@ -1,0 +1,20 @@
+# ANTAHKARANA v7 — Python Dependencies
+# IEEE Final Submission
+
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.40.0
+tokenizers>=0.19.0
+sentence-transformers>=3.0.0
+datasets>=2.19.0
+accelerate>=0.30.0
+pillow==10.2.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+scipy>=1.12.0
+evaluate>=0.4.1
+nltk
+matplotlib
+seaborn
+tqdm
+numpy
