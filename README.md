@@ -101,6 +101,13 @@ antahkarana-reasoning-framework/
 │   ├── utils.py                        # Shared utilities
 │   └── requirements.txt                # VQA-specific dependencies
 │
+├── VLM_VQA_2500_samples/               # Large-scale VQA pipeline with V9/V10 fixes (2500 samples)
+│   ├── main.py                         # Entry point: Enhanced IEEE metrics (95% CI, Pareto)
+│   ├── src/                            # Refactored modular framework (Manas, Chitta, Buddhi)
+│   ├── outputs/                        # Generated IEEE figures and efficiency Pareto tables
+│   ├── experiments/                    # Structured experiment logs and configuration
+│   └── notebooks/                      # Original research notebooks
+│
 ├── .gitignore
 └── README.md
 ```
@@ -218,6 +225,17 @@ python main.py --n-samples 200
 
 # Run specific dataset only
 python main.py --dataset vqav2 --n-samples 200
+```
+
+### VQA 2500-Sample IEEE Pipeline (V9/V10 Fixes)
+
+```bash
+cd VLM_VQA_2500_samples
+
+# Full scale-up VQA experiment: 2500 samples (500 per dataset)
+python main.py --samples_per_dataset 500
+
+# Results and 95% bootstrap CIs will be saved to outputs/results/
 ```
 
 ### Jupyter Notebook
