@@ -125,14 +125,14 @@ antahkarana-reasoning-framework/
 | [FEVER](https://fever.ai/) | Fact verification | F1 (SUPPORTS / REFUTES / NEI) |
 | [SVAMP](https://github.com/arkilpatel/SVAMP) | Arithmetic word problems | Exact Match |
 
-### VQA Benchmarks (200 samples each, 1000 total)
-| Dataset | Task |
-|---------|------|
-| [VQAv2](https://visualqa.org/) | General VQA (soft accuracy + EM) |
-| [GQA](https://cs.stanford.edu/people/dorarad/gqa/) | Compositional reasoning |
-| [OK-VQA](https://okvqa.allenai.org/) | Knowledge-grounded VQA |
-| [TextVQA](https://textvqa.org/) | OCR + reasoning |
-| [ScienceQA](https://scienceqa.github.io/) | Multimodal science QA |
+### VQA Benchmarks (Original 1000 samples & New 2500-sample scale-up)
+| Dataset | Task | Samples (Orig) | Samples (New) |
+|---------|------|----------------|---------------|
+| [VQAv2](https://visualqa.org/) | General VQA (soft accuracy + EM) | 200 | 500 |
+| [GQA](https://cs.stanford.edu/people/dorarad/gqa/) | Compositional reasoning | 200 | 500 |
+| [OK-VQA](https://okvqa.allenai.org/) | Knowledge-grounded VQA | 200 | 500 |
+| [TextVQA](https://textvqa.org/) | OCR + reasoning | 200 | 500 |
+| [ScienceQA](https://scienceqa.github.io/) | Multimodal science QA | 200 | 500 |
 
 ---
 
@@ -147,13 +147,20 @@ antahkarana-reasoning-framework/
 | FEVER (F1) | **0.428** | 0.494 | 0.122 | 0.100 | 0.166 |
 | SVAMP (EM) | **0.930** | 0.664 | 0.900 | 0.916 | 0.922 |
 
-### VQA Results (Table II in paper)
+### VQA Results (Table II in paper - 1000 samples)
 | Method | VQA Acc | Exact Match | Hallucination% | Latency (s) | Model Calls |
 |--------|---------|-------------|----------------|-------------|-------------|
 | **Full Antahkarana** | 72.6% | **79.1%** | **20.9%** | 0.690 | **2,219** |
 | Single-Pass | 73.4% | 73.4% | 26.6% | **0.351** | 1,000 |
 | CoT Baseline | 68.4% | 68.4% | 31.6% | 0.525 | 1,000 |
 | Self-Consistency (3×) | **74.5%** | 74.5% | 15.6% | 0.900 | 3,000 |
+
+### VLM VQA Scale-up Results (V9/V10 Architecture)
+*Recent scale-up experiments using the updated V9/V10 architecture (featuring strict P2 junk-guards, MCQ hallucination resolution, and VQAv2 retrieval skip) yielded the following aggregate metrics:*
+- **Overall Exact Match (EM):** ~43.3% 
+- **VQAv2 EM:** ~67.2% (+5.6pp recovery over baseline)
+- **ScienceQA Hallucination Rate:** Reduced from 94% → 48% (True false positives)
+- All new results include **95% Bootstrap Confidence Intervals** and **Efficiency Pareto Trade-off Analysis**.
 
 ---
 
@@ -189,8 +196,12 @@ pip install datasets transformers accelerate
 pip install sentence-transformers scipy matplotlib numpy spacy
 python -m spacy download en_core_web_sm
 
-# Install VQA dependencies
+# Install VQA dependencies (Original)
 cd VQA_code_1000_samples
+pip install -r requirements.txt
+
+# Install VQA dependencies (2500 Samples Scale-up)
+cd ../VLM_VQA_2500_samples
 pip install -r requirements.txt
 ```
 
